@@ -1,0 +1,330 @@
+/* Extras Page Styles */
+
+/* This stylesheet is for new placeholder pages. */
+
+/* Page Hero Section Backgrounds */
+.page-hero--placeholder-1 {
+    background: linear-gradient(rgba(45, 90, 59, 0.85), rgba(45, 90, 59, 0.85)), url('https://images.unsplash.com/photo-1492496913980-501348b61469?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3') center/cover no-repeat;
+}
+
+.page-hero--placeholder-2 {
+    background: linear-gradient(rgba(45, 90, 59, 0.85), rgba(45, 90, 59, 0.85)), url('https://images.unsplash.com/photo-1558618637-7565b36aa837?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3') center/cover no-repeat;
+}
+
+.page-hero--placeholder-3 {
+    background: linear-gradient(rgba(45, 90, 59, 0.85), rgba(45, 90, 59, 0.85)), url('https://images.unsplash.com/photo-1512428209419-a721075a33e7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3') center/cover no-repeat;
+}
+
+.page-hero--placeholder-4 {
+    background: linear-gradient(rgba(45, 90, 59, 0.85), rgba(45, 90, 59, 0.85)), url('https://images.unsplash.com/photo-1600857544200-b2f6aa324a43?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3') center/cover no-repeat;
+}
+
+/* Placeholder Content Section */
+.placeholder {
+    padding: var(--spacing-xl) var(--spacing-md);
+    background-color: var(--text-light);
+}
+
+.placeholder__container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 40vh;
+    justify-content: center;
+}
+
+.placeholder__icon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-lg);
+    animation: bounce 2s infinite;
+}
+
+.placeholder__title {
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-md);
+}
+
+.placeholder__text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--secondary-green);
+    margin-bottom: var(--spacing-lg);
+}
+
+.placeholder__button {
+    display: inline-block;
+    background-color: var(--primary-green);
+    color: var(--text-light);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.placeholder__button:hover {
+    background-color: var(--secondary-green);
+    transform: translateY(-2px);
+}
+
+/* Animation for the icon */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .placeholder__title {
+        font-size: 2rem;
+    }
+
+    .placeholder__icon {
+        font-size: 3rem;
+    }
+}
+
+/* --- Style Guides Page --- */
+.style-detail {
+    padding: var(--spacing-xl) var(--spacing-md);
+    border-bottom: 1px solid #ddd;
+}
+.style-detail:last-of-type {
+    border-bottom: none;
+}
+.style-detail--alt {
+    background-color: var(--accent-beige);
+}
+.style-detail__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+.style-detail__container--reversed {
+    grid-template-columns: 1.5fr 1fr;
+}
+.style-detail__container--reversed .style-detail__content {
+    order: 2;
+}
+.style-detail__container--reversed .style-detail__gallery {
+    order: 1;
+}
+.style-detail__title {
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-md);
+}
+.style-detail__subtitle {
+    font-size: 1.3rem;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-md);
+}
+.style-detail__text {
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.7;
+}
+.style-detail__list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: var(--spacing-lg);
+}
+.style-detail__list-item {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+.style-detail__list-item::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-green);
+}
+.style-detail__gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+}
+.style-detail__image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+.style-detail__image:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* --- Color Palettes Page --- */
+.palette-showcase {
+    padding: var(--spacing-xl) var(--spacing-md);
+    background-color: var(--text-light);
+}
+.palette-showcase__container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+.palette-showcase__title {
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-md);
+}
+.palette-showcase__text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: var(--spacing-xl);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.palette-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+    text-align: left;
+    margin-bottom: var(--spacing-xl);
+    background-color: var(--accent-beige);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+}
+.palette-card__swatches {
+    display: flex;
+    height: 200px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+.palette-card__swatch {
+    flex: 1;
+}
+.palette-card__title {
+    font-size: 1.8rem;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-sm);
+}
+.palette-card__text {
+    line-height: 1.6;
+}
+
+/* --- Room Layouts Page --- */
+.layout-guide {
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+.layout-guide--alt {
+    background-color: var(--accent-beige);
+}
+.layout-guide__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.layout-guide__header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.layout-guide__title {
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-md);
+}
+.layout-guide__text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+.layout-guide__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-lg);
+}
+.layout-option {
+    background-color: var(--text-light);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+.layout-option__image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 4px solid var(--accent-beige);
+}
+.layout-option__content {
+    padding: var(--spacing-lg);
+}
+.layout-option__title {
+    font-size: 1.5rem;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-sm);
+}
+.layout-option__text {
+    line-height: 1.6;
+}
+
+/* --- Shopping Guides Page --- */
+.shopping-section {
+    padding: var(--spacing-xl) var(--spacing-md);
+}
+.shopping-section--alt {
+    background-color: var(--accent-beige);
+}
+.shopping-section__container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.shopping-section__title {
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-xl);
+    text-align: center;
+}
+.shopping-tip {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: var(--spacing-lg);
+    align-items: flex-start;
+    margin-bottom: var(--spacing-lg);
+}
+.shopping-tip__icon {
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 1;
+}
+.shopping-tip__title {
+    font-size: 1.5rem;
+    color: var(--primary-green);
+    margin-bottom: var(--spacing-sm);
+}
+.shopping-tip__text {
+    line-height: 1.7;
+}
+
+/* Responsive adjustments for new sections */
+@media (max-width: 768px) {
+    .style-detail__container,
+    .style-detail__container--reversed {
+        grid-template-columns: 1fr;
+    }
+    .palette-card {
+        grid-template-columns: 1fr;
+    }
+}
